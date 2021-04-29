@@ -47,7 +47,7 @@ jobs:
         shell: bash
         run: |
           conan profile new default --detect
-          conan profile update settings.compiler.libcxx=libstdc++17 default
+          conan profile update settings.compiler.libcxx=libstdc++11 default
 
       - name: Install conan libraries
         shell: bash

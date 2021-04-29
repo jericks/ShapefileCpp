@@ -43,13 +43,18 @@ jobs:
             python3 -m pip install --upgrade pip setuptools
             python3 -m pip install conan
 
+      - name: Setup conan
+        shell: bash
+        run: |
+          conan profile new default --detect
+          conan profile update settings.compiler.libcxx=libstdc++11 default
+
       - name: Install conan libraries
         shell: bash
-        working-directory: ${{runner.workspace}}/build
         run: |
-            conan profile new default --detect
-            conan profile update settings.compiler.libcxx=libstdc++11 default
-            conan install $GITHUB_WORKSPACE
+            mkdir -p build
+            cd build
+            conan install ..
 
       - name: Configure (${{ matrix.configuration }})
         run: cmake -S . -Bbuild -DCMAKE_BUILD_TYPE=${{ matrix.configuration }}

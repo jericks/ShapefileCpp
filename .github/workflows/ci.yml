@@ -63,9 +63,8 @@ jobs:
         run: cmake --build build
 
       - name: Run tests ${{ matrix.compiler }}
-        working-directory: ${{runner.workspace}}/build
         shell: bash
-        run: ctest --verbose -C ${{ matrix.configuration }}
+        run: cd build && ctest --verbose -C ${{ matrix.configuration }}
 
       - uses: actions/upload-artifact@v2
         if: ${{ runner.os == 'macOS' }}

@@ -25,13 +25,13 @@ jobs:
             os: ubuntu-latest
             compiler: gcc
 
-          - toolchain: macos-clang
-            os: macos-latest
-            compiler: clang
+          #- toolchain: macos-clang
+          #  os: macos-latest
+          #  compiler: clang
 
-          - toolchain: windows-msvc
-            os: windows-latest
-            compiler: msvc
+          #- toolchain: windows-msvc
+          #  os: windows-latest
+          #  compiler: msvc
 
     steps:
       - name: Checkout Code

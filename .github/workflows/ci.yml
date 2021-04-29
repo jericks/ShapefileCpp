@@ -14,8 +14,8 @@ jobs:
       matrix:
         toolchain:
           - linux-gcc
-          - macos-clang
-          - windows-msvc
+          # - macos-clang
+          # - windows-msvc
 
         configuration:
           - Release

@@ -54,7 +54,7 @@ jobs:
         run: |
             mkdir -p build
             cd build
-            conan install ..
+            conan install .. --build
 
       - name: Configure (${{ matrix.configuration }})
         run: cmake -S . -Bbuild -DCMAKE_BUILD_TYPE=${{ matrix.configuration }}

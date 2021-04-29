@@ -1,4 +1,4 @@
-#include <sstream>
+    #include <sstream>
 #include <iostream>
 #include <filesystem>
 #include "CLI11.hpp"
@@ -16,6 +16,7 @@ TEST(ShapefileCliTests, bounds_test) {
   commands.add(&boundsCommand);
   
   std::filesystem::path path {"../../../data/points.shp"};  
+  std::cout << std::filesystem::absolute(path).c_str() << "\n";
 
   int argc = 4;
   char const *argv[4] = {"shp-cli", "bounds", "-f", std::filesystem::absolute(path).c_str()};

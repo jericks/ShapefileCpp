@@ -17,6 +17,7 @@ TEST(ShapefileCliTests, random_test) {
   commands.add(&randomCommand);
   
   std::filesystem::path path {"random.shp"};  
+  std::cout << std::filesystem::absolute(path).c_str() << "\n";
 
   int argc = 6;
   char const *argv[6] = {"shp-cli", "random", "-f", std::filesystem::absolute(path).c_str(), "-n", "10"};

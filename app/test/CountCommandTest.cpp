@@ -16,6 +16,7 @@ TEST(ShapefileCliTests, count_test) {
   commands.add(&countCommand);
   
   std::filesystem::path path {"../../../data/points.shp"};  
+  std::cout << std::filesystem::absolute(path).c_str() << "\n";
 
   int argc = 4;
   char const *argv[4] = {"shp-cli", "count", "-f", std::filesystem::absolute(path).c_str()};

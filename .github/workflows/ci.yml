@@ -47,7 +47,7 @@ jobs:
         shell: bash
         run: |
           conan profile new default --detect
-          conan profile update settings.compiler.libcxx=libstdc++11 default
+          conan profile update settings.compiler.libcxx=libstdc++ default
 
       - name: Install conan libraries
         shell: bash
@@ -61,6 +61,11 @@ jobs:
 
       - name: Build with ${{ matrix.compiler }}
         run: cmake --build build
+
+      - name: Run tests ${{ matrix.compiler }}
+        working-directory: ${{runner.workspace}}/build
+        shell: bash
+        run: ctest --verbose -C ${{ matrix.configuration }}
 
       - uses: actions/upload-artifact@v2
         if: ${{ runner.os == 'macOS' }}

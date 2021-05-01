@@ -1,3 +1,5 @@
+[![CI](https://github.com/jericks/ShapefileCpp/actions/workflows/ci.yml/badge.svg)](https://github.com/jericks/ShapefileCpp/actions/workflows/ci.yml)
+
 ShapefileCpp
 ============
 

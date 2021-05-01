@@ -15,11 +15,9 @@ TEST(ShapefileCliTests, random_test) {
   Commands commands;
   RandomCommand randomCommand{&app};
   commands.add(&randomCommand);
-  
-  std::filesystem::path path {"random.shp"};
 
   int argc = 6;
-  char const *argv[6] = {"shp-cli", "random", "-f", std::filesystem::canonical(path).c_str(), "-n", "10"};
+  char const *argv[6] = {"shp-cli", "random", "-f", "random.shp", "-n", "10"};
 
   app.parse(argc, argv);
 
@@ -28,7 +26,7 @@ TEST(ShapefileCliTests, random_test) {
 
   randomCommand.execute(instream, outstream);
 
-  shp::ShapefileReader shp {std::filesystem::absolute(path)};
+  shp::ShapefileReader shp {"random.shp"};
   ASSERT_EQ(10, shp.getCount());
   
 }

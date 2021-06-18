@@ -6,8 +6,8 @@ add_definitions("-std=c++17")
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
 find_package(shapelib REQUIRED)
-find_package(cli11 REQUIRED)
-find_package(gtest REQUIRED)
+find_package(CLI11 REQUIRED)
+find_package(GTest REQUIRED)
 
 enable_testing()
 add_subdirectory(lib)

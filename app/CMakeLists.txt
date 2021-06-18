@@ -8,7 +8,6 @@ add_library(ShapefileCppAppLib STATIC
 	src/ListCommand.cpp
 	src/RandomCommand.cpp
 )
-#target_include_directories(ShapefileCppAppLib PUBLIC "include")
 target_include_directories(ShapefileCppAppLib PUBLIC "include" "../lib/include" CLI11::CLI11)
 target_compile_features(ShapefileCppAppLib PUBLIC cxx_std_17)
 target_link_libraries(ShapefileCppAppLib PRIVATE ShapefileCppLib shapelib::shapelib CLI11::CLI11)

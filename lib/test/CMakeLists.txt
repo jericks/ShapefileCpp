@@ -17,8 +17,7 @@ add_executable(tests
 )
 target_link_libraries(tests 
     ShapefileCppLib
-    ${CONAN_LIBS_GTEST} 
-    ${CONAN_LIBS_GTEST_MAIN}
+    GTest::GTest
 )
 add_test(NAME "ShapefileTests" COMMAND "tests")
 

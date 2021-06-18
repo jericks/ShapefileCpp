@@ -4,8 +4,10 @@ project(ShapefileCpp)
 
 add_definitions("-std=c++17")
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
+find_package(shapelib REQUIRED)
+find_package(cli11 REQUIRED)
+find_package(gtest REQUIRED)
 
 enable_testing()
 add_subdirectory(lib)

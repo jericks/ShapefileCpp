@@ -1,7 +1,6 @@
 #include <sstream>
 #include <iostream>
-#include "CLI11.hpp"
-#include "CLI11.hpp"
+#include "CLI/CLI.hpp"
 #include "Command.hpp"
 #include "Commands.hpp"
 #include "CountCommand.hpp"

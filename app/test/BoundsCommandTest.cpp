@@ -1,7 +1,7 @@
     #include <sstream>
 #include <iostream>
 #include <filesystem>
-#include "CLI11.hpp"
+#include "CLI/CLI.hpp"
 #include "Command.hpp"
 #include "Commands.hpp"
 #include "BoundsCommand.hpp"

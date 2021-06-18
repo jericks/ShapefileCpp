@@ -1,5 +1,5 @@
 #include <iostream>
-#include "CLI11.hpp"
+#include "CLI/CLI.hpp"
 #include "Commands.hpp"
 #include "Command.hpp"
 #include "BoundsCommand.hpp"

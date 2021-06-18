@@ -23,9 +23,9 @@ set(ShapefileCppLib_SOURCES
 add_library(ShapefileCppLib STATIC ${ShapefileCppLib_SOURCES})
 
 target_include_directories(ShapefileCppLib
-	PUBLIC include
+	PUBLIC include shapelib::shapelib
 	PRIVATE src
 )
-target_link_libraries(ShapefileCppLib ${CONAN_LIBS_SHAPELIB})
+target_link_libraries(ShapefileCppLib shapelib::shapelib)
 
 add_subdirectory(test)

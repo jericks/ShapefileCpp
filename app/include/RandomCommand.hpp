@@ -3,7 +3,7 @@
 #include <string>
 #include <stdlib.h>
 #include <random>
-#include "CLI11.hpp"
+#include "CLI/CLI.hpp"
 #include "Command.hpp"
 #include "ShapefileWriter.hpp"
 #include "Bounds.hpp"

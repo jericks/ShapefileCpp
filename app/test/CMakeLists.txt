@@ -6,8 +6,9 @@ add_executable(cli_tests
 )
 target_link_libraries(cli_tests 
     ShapefileCppAppLib
-    ${CONAN_LIBS_GTEST} 
-    ${CONAN_LIBS_GTEST_MAIN}
+    shapelib::shapelib
+    CLI11::CLI11
+    GTest::GTest
 )
 add_test(NAME "ShapefileCliTests" COMMAND "cli_tests")
 

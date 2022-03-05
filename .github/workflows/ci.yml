@@ -70,16 +70,16 @@ jobs:
         if: ${{ runner.os == 'macOS' }}
         with:
           name: shp-cli-macos
-          path: build/bin/shp-cli
+          path: build/app/shp-cli
 
       - uses: actions/upload-artifact@v2
         if: ${{ runner.os == 'Linux' }}
         with:
           name: shp-cli-linux
-          path: build/bin/shp-cli
+          path: build/app/shp-cli
 
       - uses: actions/upload-artifact@v2
         if: ${{ runner.os == 'Windows' }}
         with:
           name: shp-cli-windows
-          path: build/bin/shp-cli.exe
+          path: build/app/shp-cli.exe

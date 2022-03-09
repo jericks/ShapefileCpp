@@ -9,6 +9,13 @@ TEST(ShapefileTests, point_create_test) {
   ASSERT_EQ(5, pt.getY());
 }
 
+TEST(ShapefileTests, point_empty_test) {
+  shp::Point pt = shp::Point::empty();
+  ASSERT_TRUE(isnan(pt.getX()));
+  ASSERT_TRUE(isnan(pt.getX()));
+  ASSERT_EQ("POINT EMPTY", pt.wkt());
+}
+
 TEST(ShapefileTests, point_wkt_test) {
   shp::Point pt {4,5};
   ASSERT_EQ("POINT (4 5)", pt.wkt());

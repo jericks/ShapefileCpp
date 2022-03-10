@@ -41,7 +41,7 @@ ShapefileCpp has a simple command line tool called **shp-cli**.
 List all of the shp-cli subcommands.
 
 ```bash
-shp-cli list
+% shp-cli list
 ```
 
 ```
@@ -54,13 +54,13 @@ random
 Create a Shapefile with random points.
 
 ```
-shp-cli random -f points.shp -n 10
+% shp-cli random -f points.shp -n 10
 ```
 
 Get the bounds of the Shapefile.
 
 ```bash
-shp-cli bounds -f points.shp
+% shp-cli bounds -f points.shp
 ```
 
 ```
@@ -70,11 +70,26 @@ POLYGON ((-151.378 -80.1131, 179.342 -80.1131, 179.342 75.8812, -151.378 -80.113
 Count the number of features in a Shapefile.
 
 ```bash
-shp-cli count  -f points.shp
+% shp-cli count  -f points.shp
 ```
 
 ```
 10
+```
+
+Get information from a Shapefile.
+
+```bash
+% shp-cli info -f points.shp
+```
+
+```
+# Features = 10
+Bounds = BOUNDS (-158.899, -158.899, 171.62, 79.2818)
+Geometry Type = Point
+Schema:
+  id = Integer (width = 9, number of decimals = 0)
+  name = String (width = 254, number of decimals = 0)
 ```
 
 Build

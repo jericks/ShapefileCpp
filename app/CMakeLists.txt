@@ -5,6 +5,7 @@ add_library(ShapefileCppAppLib STATIC
 	src/Commands.cpp
 	src/BoundsCommand.cpp
 	src/CountCommand.cpp
+	src/InfoCommand.cpp
 	src/ListCommand.cpp
 	src/RandomCommand.cpp
 )

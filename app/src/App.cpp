@@ -4,6 +4,7 @@
 #include "Command.hpp"
 #include "BoundsCommand.hpp"
 #include "CountCommand.hpp"
+#include "InfoCommand.hpp"
 #include "ListCommand.hpp"
 #include "RandomCommand.hpp"
 
@@ -17,6 +18,8 @@ int main(int argc, char *argv[]) {
     commands.add(&boundsCommand);
     CountCommand countCommand(&app);
     commands.add(&countCommand);
+    InfoCommand infoCommand(&app);
+    commands.add(&infoCommand);
     ListCommand listCommand(&app, &commands);
     commands.add(&listCommand);
     RandomCommand randomCommand(&app);

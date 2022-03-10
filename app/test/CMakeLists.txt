@@ -1,6 +1,7 @@
 add_executable(cli_tests 
     BoundsCommandTest.cpp
     CountCommandTest.cpp    
+    InfoCommandTest.cpp    
     ListCommandTest.cpp
     RandomCommandTest.cpp
 )

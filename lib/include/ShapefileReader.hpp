@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <memory>
+#include <functional>
 #include <shapefil.h>
 #include "GeometryType.hpp"
 #include "Bounds.hpp"
@@ -71,6 +72,8 @@ namespace shp {
 
             std::vector<Field> getFields();
             
+            void features(std::function<void(Feature feature)> f);
+
             FeatureIterator begin();
 
             FeatureIterator end();

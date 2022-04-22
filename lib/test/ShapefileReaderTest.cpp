@@ -3,6 +3,16 @@
 #include <sstream>
 #include <filesystem>
 
+TEST(ShapefileReaderTests, shapefile_read_features_test) {
+  std::filesystem::path path {"../../../data/points.shp"};  
+  shp::ShapefileReader shp {std::filesystem::absolute(path)};
+  int count = 0;
+  shp.features([&](shp::Feature f) {
+    count++;
+  });
+  ASSERT_EQ(10, count);
+}
+
 TEST(ShapefileReaderTests, shapefile_read_points_test) {
   std::filesystem::path path {"../../../data/points.shp"};  
   shp::ShapefileReader shp {std::filesystem::absolute(path)};

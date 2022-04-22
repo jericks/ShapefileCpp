@@ -33,6 +33,15 @@ for(auto const& feature : shp) {
 }
 ```
 
+Read features using a lambda:
+
+```cpp
+shp::ShapefileReader shp {std::filesystem::absolute("points.shp")};
+shp.features([&](shp::Feature f) {
+  std:cout << f.getGeometry().wkt() << "\n";
+});
+```
+
 Command line interface
 ----------------------
 

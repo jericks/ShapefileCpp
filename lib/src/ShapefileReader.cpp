@@ -234,6 +234,13 @@ namespace shp {
         return f;
     }
 
+    void ShapefileReader::features(std::function<void(Feature feature)> func) {
+        int count = this->getCount();
+        for(int i = 0; i < count; ++i) {
+            func(this->getFeature(i));
+        }
+    }
+
     FeatureIterator ShapefileReader::begin() {
         return FeatureIterator(*this, 0);
     }

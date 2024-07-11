@@ -15,9 +15,13 @@ add_executable(tests
     ShapefileReaderTest.cpp
     ShapefileWriterTest.cpp
 )
-target_link_libraries(tests 
+target_link_libraries(tests
+		PRIVATE
     ShapefileCppLib
-    GTest::GTest
+    shapelib::shp
+		CLI11::CLI11
+    GTest::gtest
+    GTest::gtest_main
 )
 add_test(NAME "ShapefileTests" COMMAND "tests")
 

@@ -26,6 +26,6 @@ target_include_directories(ShapefileCppLib
 	PUBLIC include shapelib::shapelib
 	PRIVATE src
 )
-target_link_libraries(ShapefileCppLib shapelib::shapelib)
+target_link_libraries(ShapefileCppLib shapelib::shp)
 
 add_subdirectory(test)
